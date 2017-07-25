@@ -1,16 +1,13 @@
 # FLYERBD TUTORIAL
 
-Angular (v-1.x) and Codeigniter (v-3.x) [Youtube Tutorial](https://www.youtube.com/watch?v=mHc-q0WjTQQ&list=PLmnDE5FTOQtkpGVC6mRs8bkzWYHTWmX2c)
+SGDB MySql
+'hostname' => 'localhost'
+	'username' => 'root'
+	'password' => ''
+	'database' => 'base_teste_php'
+	'dbdriver' => 'mysqli'
 
+usuario
+Importa banco de dados "base_teste_php.sql" na raiz do projeto
 
-## Getting Started
-
-`bower install`
-
-## Angular 1.x Codeigniter 3.x Project Setup | Part 2
-
-Change git branch accordingly to tutorial.
-
-`git checkout project-setup-part-2`
-
-[Video Link: Angular 1.x Codeigniter 3.x Project Setup | Part 2](https://www.youtube.com/watch?v=dVBfE8kWOW8)
+## Angular 1.x Codeigniter 3.x Project Tuthor 
