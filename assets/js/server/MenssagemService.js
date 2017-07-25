@@ -19,7 +19,7 @@
         service.save = save;
         service.remove = remove;
         service.getUser = getUser;
-        var UrlService ="http://localhost/flyerbd/";
+        var UrlService ="http://localhost/codeigniter-restserver-master/";
 
         return service;
 

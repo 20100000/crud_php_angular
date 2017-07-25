@@ -20,7 +20,7 @@
         service.remove = remove;
         service.getCep = getCep;
 
-        var UrlService ="http://localhost/flyerbd/";
+        var UrlService ="http://localhost/codeigniter-restserver-master/";
 
         return service;
 
