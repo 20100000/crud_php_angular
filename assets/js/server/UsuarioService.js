@@ -20,7 +20,7 @@
         service.remove = remove;
         service.getCep = getCep;
 
-        var UrlService ="http://localhost/codeigniter-restserver-master/";
+        var UrlService ="http://localhost/crud_php_angular-master/";
 
         return service;
 

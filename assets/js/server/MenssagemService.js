@@ -19,7 +19,7 @@
         service.save = save;
         service.remove = remove;
         service.getUser = getUser;
-        var UrlService ="http://localhost/codeigniter-restserver-master/";
+        var UrlService ="http://localhost/crud_php_angular-master/";
 
         return service;
 
