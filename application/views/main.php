@@ -22,7 +22,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Teste php Thutor</a>
+			<a class="navbar-brand" href="#">Teste PHP Thutor</a>
 		</div>
 		<!-- Collect the nav links, forms, and other content for toggling -->
 
@@ -31,6 +31,7 @@
 	<!-- /.container -->
 </nav>
 <div class="container">
+		
 		<div class="row">
 			<div class="col-lg-12">
 				<div ng-view>
@@ -43,9 +44,10 @@
 
 <script src="<?php echo base_url() ?>assets/angular/angular.min.js"></script>
 <script src="<?php echo base_url() ?>assets/angular/route.min.js"></script>
+<script src="<?php echo base_url() ?>assets/js/ui-bootstrap-custom-tpls-2.0.1.min.js"></script>
 
 <script src="<?php echo base_url() ?>assets/js/app.js"></script>
-<script src="<?php echo base_url() ?>node_modules/oclazyload/dist/ocLazyLoad.js"></script>
+<script src="<?php echo base_url() ?>assets/node_modules/oclazyload/dist/ocLazyLoad.js"></script>
 
 
 </body>

@@ -1,0 +1,32 @@
+<form ng-submit="save()" name="form" novalidate>
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Menssagem</h4>
+    </div>
+
+    <div class="modal-body">
+        <div class="row">
+            <div class="form-group">
+                <div class="col-lg-6">
+                    <label >Usuario</label>
+                    <select ng-model="model2.id_usuario" class="form-control" ng-disabled="disabled">
+                        <option ng-repeat="option in usuarios" class="form-control" value="{{option.id}}">{{option.nome}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-lg-12">
+                    <label >Menssagem</label>
+                    <textarea class="form-control" ng-disabled="disabled" name="msg" ng-model="model2.msg"></textarea>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="modal-footer">
+        <button ng-click="cancel()" class="btn btn-default pull-left" type="button">Cancelar</button>
+        <button class="btn btn-success pull-right" ng-if="!disabled" type="submit">Salvar</button>
+    </div>
+</form>

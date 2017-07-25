@@ -1,0 +1,78 @@
+<form ng-submit="save()" name="form" novalidate>
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Usuario</h4>
+    </div>
+
+    <div class="modal-body">
+        <div class="row">
+            <div class="form-group">
+                <div class="col-lg-8">
+                    <label >Nome</label>
+                    <input type="text" class="form-control" ng-model="model.nome" ng-disabled="disabled"/>
+                </div>
+                <div class="col-lg-4">
+                    <label >Data Nasc</label>
+                    <input type="date" class="form-control"  ng-model="model.data_nasc" ng-disabled="disabled">
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-lg-3">
+                    <label >CEP</label>
+                    <input type="text" class="form-control" max="9" placeholder="99999-999" ng-model="model.cep" ng-disabled="disabled">
+                </div>
+                <div class="col-lg-3">
+                    <button class="btn btn-primary" type="button" ng-if="!disabled" ng-click="buscaCEP(model.cep);" style="margin-top: 20px">Busca</button>
+                </div>
+                <div class="col-lg-6">
+
+                </div>
+
+            </div>
+            <div class="form-group">
+                    <div class="col-lg-10">
+                        <label >Logradouro</label>
+                        <input type="text" class="form-control" ng-model="model.logradouro" ng-disabled="disabled">
+                    </div>
+                    <div class="col-lg-2">
+                        <label >Nº</label>
+                        <input type="text" class="form-control" ng-model="model.numero" ng-disabled="disabled">
+                    </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-5">
+                    <label >Bairro</label>
+                    <input type="text" class="form-control" ng-model="model.bairro" ng-disabled="disabled">
+                </div>
+                <div class="col-lg-5">
+                    <label >Cidade</label>
+                    <input type="text" class="form-control" ng-model="model.cidade" ng-disabled="disabled">
+                </div>
+                <div class="col-lg-2">
+                    <label >UF</label>
+                    <input type="text" class="form-control" ng-model="model.uf" ng-disabled="disabled">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-6">
+                    <label >Telefone</label>
+                    <input type="text" class="form-control" ng-model="model.telefone" ng-disabled="disabled">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-12">
+                    <label >Biografia</label>
+                    <textarea class="form-control" name="biografia" ng-model="model.biografia" ng-disabled="disabled"></textarea>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="modal-footer">
+        <button ng-click="cancel()" class="btn btn-default pull-left" type="button">Cancelar</button>
+        <button class="btn btn-success pull-right" type="submit" ng-if="!disabled">Salvar</button>
+    </div>
+</form>

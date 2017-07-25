@@ -11,12 +11,12 @@ class Usuario extends CI_Model
 {
     public function usuario_all_data()
     {
-        return $this->db->select('id,nome,data_nasc,data_cad,biografia')->from('usuario')->order_by('id','desc')->get()->result();
+        return $this->db->select('*')->from('usuario')->where('status',1)->order_by('id','desc')->get()->result();
     }
 
     public function usuario_detail_data($id)
     {
-        return $this->db->select('id,nome,data_nasc,data_cad,biografia')->from('usuario')->where('id',$id)->order_by('id','desc')->get()->row();
+        return $this->db->select('*')->from('usuario')->where('id',$id)->order_by('id','desc')->get()->row();
     }
 
     public function usuario_create_data($data)
@@ -31,9 +31,9 @@ class Usuario extends CI_Model
         return array('status' => 200,'message' => 'Data has been updated.');
     }
 
-    public function usuario_delete_data($id)
+    public function usuario_delete_data($id, $data)
     {
-        $this->db->where('id',$id)->delete('usuario');
+        $this->db->where('id',$id)->update('usuario', $data);
         return array('status' => 200,'message' => 'Data has been deleted.');
     }
 

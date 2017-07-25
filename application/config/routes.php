@@ -56,6 +56,14 @@ $route['usuario/create']['post']   	      = 'usuarioController/create';
 $route['usuario/update/(:num)']['put']    = 'usuarioController/update/$1';
 $route['usuario/delete/(:num)']['delete'] = 'usuarioController/delete/$1';
 
+$route['user']['get']          	      = 'msgController/user';
+$route['msg']['get']          	      = 'msgController';
+$route['msg/detail/(:num)']['get']    = 'msgController/detail/$1';
+$route['msg/create']['post']   	      = 'msgController/create';
+$route['msg/update/(:num)']['put']    = 'msgController/update/$1';
+$route['msg/delete/(:num)']['delete'] = 'msgController/delete/$1';
+
+
 $route['default_controller'] = 'main';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

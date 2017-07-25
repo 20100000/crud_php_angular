@@ -48,10 +48,13 @@ class UsuarioController extends CI_Controller
         } else {
                 $respStatus = 200;
                     $params = json_decode(file_get_contents('php://input'), TRUE);
+
                     if ($params['nome'] == "" ) {
                         $respStatus = 400;
                         $resp = array('status' => 400,'message' =>  'Title & Author can\'t empty');
                     } else {
+                        $params['data_cad'] = date('Y-m-d');
+                        $params['status'] = 1;
                         $resp = $this->Usuario->usuario_create_data($params);
                     }
                     json_output($respStatus,$resp);
@@ -84,7 +87,8 @@ class UsuarioController extends CI_Controller
         if($method != 'DELETE' || $this->uri->segment(3) == '' || is_numeric($this->uri->segment(3)) == FALSE){
             json_output(400,array('status' => 400,'message' => 'Bad request.'));
         } else {
-                    $resp = $this->Usuario->usuario_delete_data($id);
+                    $params =array("status"=>0);
+                    $resp = $this->Usuario->usuario_delete_data($id,$params);
                     json_output(200,$resp);
         }
     }

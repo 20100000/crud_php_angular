@@ -1,5 +1,5 @@
 var FLYERBD = angular.module('FLYERBD', [
-	'ngRoute','oc.lazyLoad'
+	'ngRoute','oc.lazyLoad','ui.bootstrap'
 	]);
 
 FLYERBD.config(['$routeProvider', function ($routeProvider,$ocLazyLoad) {
@@ -9,28 +9,12 @@ FLYERBD.config(['$routeProvider', function ($routeProvider,$ocLazyLoad) {
 		controller: 'HomeCtrl',
 		resolve:{
 			loadAsset:["$ocLazyLoad", function ($ocLazyLoad) {
-				return $ocLazyLoad.load(['assets/js/controllers/HomeCtrl.js','assets/js/server/UsuarioService.js'])
+				return $ocLazyLoad.load(['assets/js/controllers/HomeCtrl.js','assets/js/server/UsuarioService.js',
+					'assets/js/controllers/usuarioFormController.js','assets/js/controllers/menssagemFormController.js',
+					'assets/js/server/MenssagemService.js'
+				])
 			}]
 		}
 	})
-	.when('/about', {
-		templateUrl: 'about',
-		controller: 'AboutCtrl',
-		resolve:{
-			loadAsset:["$ocLazyLoad", function ($ocLazyLoad) {
-				return $ocLazyLoad.load('assets/js/controllers/AboutCtrl.js')
-			}]
-			
-		}
 
-	})
-	.when('/contact', {
-		templateUrl: 'contact',
-		controller: 'ContactCtrl',
-		resolve:{
-			loadAsset:["$ocLazyLoad", function ($ocLazyLoad) {
-				return $ocLazyLoad.load('assets/js/controllers/ContactCtrl.js')
-			}]
-		}
-	})
 }]);

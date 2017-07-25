@@ -1,10 +1,10 @@
 /**
- * Created by tiago on 23/07/2017.
+ * Created by tiago on 24/07/2017.
  */
 (function() {
     'use strict';
     angular.module('FLYERBD')
-        .factory('UsuarioService', Service);
+        .factory('MenssagemService', Service);
 
     Service.$inject = ['$http', '$q'];
 
@@ -18,8 +18,7 @@
         service.getCollection = getCollection;
         service.save = save;
         service.remove = remove;
-        service.getCep = getCep;
-
+        service.getUser = getUser;
         var UrlService ="http://localhost/flyerbd/";
 
         return service;
@@ -27,7 +26,7 @@
         function getCollection() {
             var future = $q.defer();
 
-            $http.get(UrlService+'usuario')
+            $http.get(UrlService+'msg')
 
                 .then(function(response) {
                     future.resolve(response.data);
@@ -47,9 +46,9 @@
                 svc = "";
 
             if (model.id) {
-                svc = $http.put(UrlService+'usuario/update/'+ model.id, model)
+                svc = $http.put(UrlService+'msg/update/'+ model.id, model)
             } else {
-                svc = $http.post(UrlService+'usuario/create', model);
+                svc = $http.post(UrlService+'msg/create', model);
             }
 
             svc.then(function(response) {
@@ -68,7 +67,7 @@
         function remove(model) {
             var future = $q.defer();
             console.log(model);
-            $http.delete(UrlService+'usuario/delete/'+model.id)
+            $http.delete(UrlService+'msg/delete/'+model.id)
                 .then(function(response) {
                     future.resolve(response.data);
                 })
@@ -82,10 +81,10 @@
             return future.promise;
         }
 
-        function getCep(cep) {
+        function getUser() {
             var future = $q.defer();
 
-            $http.get("https://viacep.com.br/ws/"+cep+"/json/")
+            $http.get(UrlService+'user')
 
                 .then(function(response) {
                     future.resolve(response.data);
@@ -99,6 +98,8 @@
 
             return future.promise;
         }
+
+       
 
     }
 
