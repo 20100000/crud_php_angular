@@ -1,4 +1,7 @@
 # FLYERBD TUTORIAL
+ussar xamp appache
+
+salva projeto na pasta htdocs
 
 SGDB MySql
 'hostname' => 'localhost'
