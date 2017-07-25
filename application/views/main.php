@@ -47,7 +47,7 @@
 <script src="<?php echo base_url() ?>assets/js/ui-bootstrap-custom-tpls-2.0.1.min.js"></script>
 
 <script src="<?php echo base_url() ?>assets/js/app.js"></script>
-<script src="<?php echo base_url() ?>assets/node_modules/oclazyload/dist/ocLazyLoad.js"></script>
+<script src="<?php echo base_url() ?>assets/node_moduless/oclazyload/dist/ocLazyLoad.js"></script>
 
 
 </body>
